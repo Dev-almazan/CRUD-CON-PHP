@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="es">
+     <head>
+        <html lang="es"/>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dev-almazan" />
+        <title>Ejemplo Datatables</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/estilo.css" rel="stylesheet" />
+        <link href="css/tablas.css" rel="stylesheet"  />
+        <link href="css/mdb.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+        <link  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet"/>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+
+
+    </head>
+    <body class="container-fluid">
+        
+           
+         <H2 class="text-center text-primary" style="padding: 2.5%;       ">CRUD BASICO CON PHP MYSQL  Y JAVA SCRIPT</H2>
+        
+        
+        <center><button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#captura">
+            <i class="fas fa-users"></i> Capturar </button></center
+    
+   
+                        <section class="card">
+                           
+                                             <!-- Button trigger modal -->
+
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover table-striped borde" id="tablas" width="100%" cellspacing="0">
+                                        <thead class="text-white bg-" style="background-color:#263238;">
+                                            <tr>
+              <th>id</th>           
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Correo</th>               
+            <th>Teléfono</th> 
+            <th>Mensaje</th>     
+            <th>Eliminar</th>                                     
+                                        
+                                            </tr>
+                                        </thead>
+         
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+           
+
+
+
+<!-- Modal  CAPTURAR-->
+<div class="modal fade" id="captura" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="exampleModalLabel">Nueva captura</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="capturar.php" method="post" enctype="multipart/form-data"  class="text-center" >
+                           
+                        <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="input">Nombre</label>  
+      <input type="text" class="form-control" placeholder="Nombre Completo" required title="Por favor ingrese nombre sin acentos-Máximo 20 caracteres." pattern="[a-z-A-Z- ]{3,20}" name="nombre">
+    </div>
+    <div class="form-group col-md-6">
+         <label for="input">Apellidos</label>
+      <input type="text" class="form-control" placeholder="Apellidos" required title="Por favor ingrese nombre sin acentos-Máximo 20 caracteres." pattern="[a-z-A-Z- ]{3,20}" name="apellidos">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="input">Email</label>
+      <input type="email" class="form-control" placeholder="Correo Electrónico" required name="correo">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="input">Teléfono</label>
+      <input type="text" class="form-control" title="Por favor ingrese número de teléfono a 10 dígitos." pattern="[0-9]{1,10}" required placeholder="Celular o Casa" name="telefono">
+    </div>
+  </div>
+
+<div class="form-row">
+   
+                        
+   <label  class="text-center">Mensaje</label>
+      <input type="text" class="form-control" id="inputZip" required name="mensaje" pattern="[a-z-A-Z-0-9 ]{6,60}" >
+  </div><br>
+           
+  
+               <button type="submit" class="btn btn-primary">Guardar</button>
+                  </form> 
+      </div>
+    
+    </div>
+  </div>
+</div>            
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-demo.js"></script>
+    </body>
+</html>
